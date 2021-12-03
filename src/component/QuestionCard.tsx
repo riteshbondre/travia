@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import { width } from "@mui/system";
 
 
 function QuestionCard() {
@@ -14,7 +15,7 @@ function QuestionCard() {
   const [userAnswer, setUserAnswer] = useState("");
   const [answer, setAnswer] = useState("");
   const [result, setResult] = useState("");
-  
+
   const handleClose = () => {
     setOpen(false)
     window.location.reload();
@@ -51,15 +52,16 @@ function QuestionCard() {
         {all && (
           <div>
             {all.map((quest: any, id) => (
-              <div  key ={id}>{quest?.question}</div>
+              <div>
+              <div  key ={id}><b>Question:</b> <br></br>{quest?.question}</div>
+              </div>
             ))}
           </div>
         )}
       </div>
       <div className="answer-field">
-      <label>write your answer :</label>
       <br></br>
-      <input onChange={getAnswer} ></input>
+      <input placeholder="write your answer" style={{width:"200px",height:"25px"}} onChange={getAnswer} ></input>
       <br></br>
       </div>
     </div>

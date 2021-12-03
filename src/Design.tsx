@@ -4,6 +4,8 @@ import styled from "styled-components";
 const StyledQuestionCard = styled.div`
 
 &.question-card {
+  margin:40px 150px 20px 150px;
+  padding:25px;
   border: 1px solid;
 border-radius: 15px;
 text-align: center;
@@ -11,6 +13,7 @@ text-align: center;
   font-size: 30px;
 }
 .head{
+  font-size:50px;
   background: #80a6fd;
 }
 .answer-field{
